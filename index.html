@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choropleth Maps</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="text/x-icon" href="./images/icon2.png">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+</head>
+<body>
+    <h1 id="title">United States Educational Attainment</h1>
+    <img src="./images/education-green.png" alt="Education">
+    <p id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</p>
+    <div id="tooltip1"></div>
+    <title>Title</title>
+    <svg id="canvas">
+        <g class="key" id="legend" transform="translate(0,40)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+            
+            <text class="caption" id="tooltip" x="360" y="-15" fill="#000" text-anchor="start" font-weight="bold" font-size="1rem"></text>
+
+            <rect height="10" x="567" width="33" fill="Black"></rect>
+            <rect height="10" x="600" width="33" fill="Red"></rect>
+            <rect height="10" x="633" width="32" fill="Orange"></rect>
+            <rect height="10" x="665" width="33" fill="Yellow"></rect>
+            <rect height="10" x="698" width="32" fill="GreenYellow"></rect>
+            <rect height="10" x="730" width="33" fill="LightGreen"></rect>
+            <rect height="10" x="763" width="32" fill="LimeGreen"></rect>
+            <rect height="10" x="795" width="33" fill="SeaGreen"></rect>
+            <rect height="10" x="828" width="33" fill="Magenta"></rect>
+           
+            <text class="caption" x="700" y="-6" fill="#000" text-anchor="start" font-weight="bold">Legend</text>
+
+            <g class="tick" opacity="1" transform="translate(567,0)">
+                <line stroke="currentColor" y2="13"></line>
+                <text fill="currentColor" y="16" dy="0.71em">0%</text>
+                </g>
+
+            <g class="tick" opacity="1" transform="translate(600,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">3%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(633,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">12%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(665,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">21%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(698,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">30%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(730,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">39%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(763,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">48%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(795,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">57%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(828,0)">
+            <line stroke="currentColor" y2="13"></line>
+            <text fill="currentColor" y="16" dy="0.71em">66%</text>
+            </g>
+
+            <g class="tick" opacity="1" transform="translate(861,0)">
+                <line stroke="currentColor" y2="13"></line>
+                <text fill="currentColor" y="16" dy="0.71em">75%</text>
+                </g>
+        </g>
+    </svg>
+    
+    <div id="source">Source: <a href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx">USDA Economic Research Service</a>
+      </div>
+      <p id="copyright">&copy; Vladimir Jovanović :: DobarBREND 2023</p>
+    
+</body>
+    <script src="./js/scripts.js" defer></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+</html>
